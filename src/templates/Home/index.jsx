@@ -4,9 +4,7 @@ import { loadPosts } from "../../utils/load-posts";
 import { Posts } from "../../components/Posts";
 import { Button } from "../../components/Button";
 import { TextInput } from "../../components/TextInput";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export const Home = () => {
   const [posts, setPosts] = useState([]);
@@ -55,7 +53,7 @@ export const Home = () => {
         <TextInput searchValue={searchValue} handleChange={handleChange} />
       </div>
       {filteredPosts.length > 0 && <Posts posts={filteredPosts} />}
-      {filteredPosts.length === 0 && <p>Não existem posts =(</p>}
+      {filteredPosts.length === 0 && <p>There are no posts =(</p>}
       <div className="button-container">
         {!searchValue && (
           <Button
